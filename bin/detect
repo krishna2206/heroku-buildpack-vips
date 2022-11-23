@@ -3,10 +3,10 @@
 SUPPORTED_STACKS=(v4-heroku-18 v4-heroku-20 v4-heroku-22)
 
 for stack_option in "${SUPPORTED_STACKS[@]}"; do
-  if [[ $STACK = $stack_option ]]; then
+  if [[ $HEROKU_STACK = $stack_option ]]; then
     echo "vips ($stack_option stack)"
     exit 0
   fi
 done
 
-echo "vips buildpack doesn't support the $STACK stack" && exit 1
+echo "vips buildpack doesn't support the $HEROKU_STACK stack" && exit 1
