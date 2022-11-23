@@ -1,6 +1,6 @@
 #! /bin/bash
 
-SUPPORTED_STACKS=(v4-heroku-18 v4-heroku-20 v4-heroku-22)
+SUPPORTED_STACKS=(heroku-18 heroku-20 heroku-22)
 
 for stack_option in "${SUPPORTED_STACKS[@]}"; do
   if [[ $HEROKU_STACK = $stack_option ]]; then
